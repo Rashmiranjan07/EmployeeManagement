@@ -1,4 +1,5 @@
-# Employee Management System (Java | JSP | Servlet | JDBC | MySQL)
+# Employee Management System
+(Java | JSP | Servlet | JDBC | MySQL)
 
 A simple **Employee Management System** built using **Core Java + JSP/Servlet + JDBC + MySQL** in **Eclipse IDE** and deployed on **Apache Tomcat**.  
 This project demonstrates login, form handling, database connectivity, and searching employee/student records by email.
