@@ -1,0 +1,43 @@
+package com.qsp.repository2;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.qsp.util2.ConnectionPool;
+
+public class EmployeeRepository {
+
+	private static final EmployeeRepository object = new EmployeeRepository();
+
+	private EmployeeRepository() {
+	}
+
+	public static EmployeeRepository getInstance() {
+		return object;
+	}
+
+	public String addEmployee(String name, String age, String phone, String email, String gender) {
+
+		String sql = "insert into employeTable values (?,?,?,?,?)";
+		Connection con = ConnectionPool.supply();
+
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			ps.setInt(2, Integer.parseInt(age));
+			ps.setString(3, phone);
+			ps.setString(4, email);
+			ps.setString(5, gender);
+
+			ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			ConnectionPool.accept(con);
+		}
+
+		return "employee added";
+	}
+}
