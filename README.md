@@ -58,3 +58,12 @@ Employee/
 └── .gitignore
 ```
 
+
+## ⚙️ How to Run the Project
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/Rashmiranjan07/Employee.git
+---
+
+#### ⚠️ Note: This project is currently under development. I am actively learning backend technologies and continuously improving this project as part of my learning journey.
