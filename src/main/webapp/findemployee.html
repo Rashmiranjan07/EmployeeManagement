@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Find Student</title>
+<title>Find Employee</title>
 
 <style>
 * {
@@ -108,20 +108,21 @@ button:hover {
 <body>
 
     <div class="container">
-        <h1>Find Single Student</h1>
+        <h1>Find Employee</h1>
 
-        <form action="findstudentaction.jsp">
+        <!-- Correct JSP Mapping -->
+        <form action="findemployeeaction.jsp" method="get">
 
             <div class="input-group">
-                <label>Enter Email</label>
-                <input type="text" name="email" placeholder="Enter email" required>
+                <label>Enter Employee Email</label>
+                <input type="email" name="email" placeholder="Enter employee email" required>
             </div>
 
-            <button type="submit">FIND</button>
+            <button type="submit">FIND EMPLOYEE</button>
 
         </form>
 
-        <div class="footer-text">Rashmiranjan Shaw</div>
+        <div class="footer-text">Employee Management System</div>
     </div>
 
 </body>
