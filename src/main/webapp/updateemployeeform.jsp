@@ -54,7 +54,7 @@
                 
                  <input type="radio" name="gender" value="Other"
                 <%= "Other".equalsIgnoreCase(gender) ? "checked" : "" %>> Other
-            <br><br>
+            <br>
 
             <input type="submit" value="SUBMIT">
         </h1>
