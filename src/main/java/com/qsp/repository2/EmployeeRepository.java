@@ -43,7 +43,7 @@ public class EmployeeRepository {
 		return "employee added";
 	}
 
-	public ResultSet getStudentByEmail(String email) throws SQLException {
+	public ResultSet getEmployeeByEmail(String email) throws SQLException {
 		Connection con = ConnectionPool.supply();
 		String sql = "select * from employeTable where email=? ";
 		PreparedStatement ps = con.prepareStatement(sql);
