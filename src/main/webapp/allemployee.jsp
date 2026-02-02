@@ -187,16 +187,11 @@ a {
 					<td><%=rs.getString(3)%></td>
 					<td><%=rs.getString(4)%></td>
 
-					<td>
-    <a class="update" href="updateemployee.jsp?email=<%=rs.getString(4)%>">
-        Update
-    </a>
-</td>
-<td>
-    <a class="delete" href="deleteemployee?email=<%=rs.getString(4)%>">
-        Delete
-    </a>
-</td>
+					<td><a class="update"
+						href="updateemployee.jsp?email=<%=rs.getString(4)%>"> Update </a>
+					</td>
+					<td><a class="delete"
+						href="deleteemployee?email=<%=rs.getString(4)%>"> Delete </a></td>
 
 				</tr>
 				<%
