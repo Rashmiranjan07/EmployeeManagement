@@ -61,4 +61,19 @@ public class EmployeeRepository {
 		return rs;
 	}
 
+	public void deleteEmployeeByEmail(String email) {
+		try {
+			Connection con = ConnectionPool.supply();
+			String sql = "delete from employeTable where email=?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, email);
+			ps.executeUpdate();
+			ConnectionPool.accept(con);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+	}
+
 }
