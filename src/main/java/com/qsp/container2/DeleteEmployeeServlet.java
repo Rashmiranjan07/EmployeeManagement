@@ -18,7 +18,7 @@ public class DeleteEmployeeServlet {
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email = req.getParameter("email");
 		employeerepo.deleteEmployeeByEmail(email);
-		RequestDispatcher rd = req.getRequestDispatcher("");
+		RequestDispatcher rd = req.getRequestDispatcher("allemployee.jsp");
 		rd.forward(req, resp);
 		
 	}
