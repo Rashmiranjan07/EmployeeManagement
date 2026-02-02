@@ -172,7 +172,6 @@ a {
 					<td>Age</td>
 					<td>Phone</td>
 					<td>Email</td>
-					<td>Gender</td>
 					<td>Update</td>
 					<td>Delete</td>
 				</tr>
@@ -187,7 +186,6 @@ a {
 					<td><%=rs.getInt(2)%></td>
 					<td><%=rs.getString(3)%></td>
 					<td><%=rs.getString(4)%></td>
-					<td><%=rs.getString(5)%></td>
 
 					<td><a class="update"
 						href="updateemployeeform.jsp?email=<%=rs.getString(4)%>"> Update </a>
