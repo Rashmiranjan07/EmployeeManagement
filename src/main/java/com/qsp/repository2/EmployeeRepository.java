@@ -78,7 +78,7 @@ public class EmployeeRepository {
 
 	public void updateEmployeeByEmail(String email, String name, int age, String phone, String gender) {
 
-		String sql = "update employee set name=?, age=?, phone=?, gender=? where email=?";
+		String sql = "update employeTable set name=?, age=?, phone=?, gender=? where email=?";
 
 		try {
 			Connection con = ConnectionPool.supply();
