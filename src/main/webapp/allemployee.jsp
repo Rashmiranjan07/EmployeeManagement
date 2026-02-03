@@ -37,17 +37,17 @@ body {
 	animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+@
+keyframes fadeIn {from { opacity:0;
+	transform: translateY(40px);
 }
 
+to {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+}
 h1 {
 	text-align: center;
 	color: #fff;
@@ -111,60 +111,54 @@ a {
 
 <body>
 
-<%
-EmployeeRepository employeerepo = EmployeeRepository.getInstance();
-ResultSet rs = employeerepo.getAllEmployee();
-%>
+	<%
+	EmployeeRepository employeerepo = EmployeeRepository.getInstance();
+	ResultSet rs = employeerepo.getAllEmployee();
+	%>
 
-<div class="container">
+	<div class="container">
 
-	<h1>All Employees</h1>
+		<h1>All Employees</h1>
 
-	<table>
-		<thead>
-			<tr>
-				<td>Name</td>
-				<td>Age</td>
-				<td>Phone</td>
-				<td>Email</td>
-				<td>Gender</td>
-				<td>Update</td>
-				<td>Delete</td>
-			</tr>
-		</thead>
+		<table>
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Age</td>
+					<td>Phone</td>
+					<td>Email</td>
+					<td>Gender</td>
+					<td>Update</td>
+					<td>Delete</td>
+				</tr>
+			</thead>
 
-		<tbody>
-		<%
-		while (rs != null && rs.next()) {
-		%>
-			<tr>
-				<td><%= rs.getString(1) %></td>
-				<td><%= rs.getInt(2) %></td>
-				<td><%= rs.getString(3) %></td>
-				<td><%= rs.getString(4) %></td>
-				<td><%= rs.getString(5) %></td>  <!-- GENDER -->
+			<tbody>
+				<%
+				while (rs != null && rs.next()) {
+				%>
+				<tr>
+					<td><%=rs.getString(1)%></td>
+					<td><%=rs.getInt(2)%></td>
+					<td><%=rs.getString(3)%></td>
+					<td><%=rs.getString(4)%></td>
+					<td><%=rs.getString(5)%></td>
+					<!-- GENDER -->
 
-				<td>
-					<a class="update"
-					   href="updateemployeeform.jsp?email=<%= rs.getString(4) %>">
-					   Update
-					</a>
-				</td>
-				<td>
-					<a class="delete"
-					   href="deleteemployee?email=<%= rs.getString(4) %>">
-					   Delete
-					</a>
-				</td>
-			</tr>
-		<%
-		}
-		%>
-		</tbody>
-	</table>
+					<td><a class="update"
+						href="updateemployeeform.jsp?email=<%=rs.getString(4)%>">
+							Update </a></td>
+					<td><a class="delete"
+						href="deleteemployee?email=<%=rs.getString(4)%>"> Delete </a></td>
+				</tr>
+				<%
+				}
+				%>
+			</tbody>
+		</table>
 
-	<div class="footer-text">Employee Management System</div>
-</div>
+		<div class="footer-text">Employee Management System</div>
+	</div>
 
 </body>
 </html>
