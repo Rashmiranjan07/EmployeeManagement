@@ -69,4 +69,3 @@ Employee/
 
 #### ⚠️ Note: This project is currently under development. I am actively learning backend technologies and continuously improving this project as part of my learning journey.
   [ May be updated later ] 
-
